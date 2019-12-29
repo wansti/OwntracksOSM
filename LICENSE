@@ -672,3 +672,20 @@ may consider it more useful to permit linking proprietary applications with
 the library.  If this is what you want to do, use the GNU Lesser General
 Public License instead of this License.  But first, please read
 <https://www.gnu.org/licenses/why-not-lgpl.html>.
+
+----------------------------------------------------------------------------
+LIBRARIES:
+
+While OwntracksOSM is licensed under the GPLv3 as stated above, it uses the
+following libraries which are available under different licenses:
+
+Leaflet:
+https://leafletjs.com, https://github.com/Leaflet
+BSD 2-Clause "Simplified" License (https://github.com/Leaflet/Leaflet/blob/master/LICENSE)
+
+Paho:
+https://www.eclipse.org/paho, https://github.com/eclipse/paho.mqtt.javascript
+Eclipse Distribution License (https://github.com/eclipse/paho.mqtt.javascript/blob/master/edl-v10) and
+Eclipse Public License (https://github.com/eclipse/paho.mqtt.javascript/blob/master/epl-v10)
+
+All libraries are used without modifications.
