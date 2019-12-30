@@ -60,3 +60,9 @@ The MQTT protocol is designed for environments with unstable connections (i.e. I
 * Force the app open using the "screen on" menu button.
 * Check the log for hints on why the app cannot connect.
 
+### Unsupported Features
+Owntracks features that are currently unsupported by OwntracksOSM:
+* [Beacons](https://owntracks.org/booklet/features/beacons)
+* [Waypoints](https://owntracks.org/booklet/features/waypoints)
+* [Encrypted payloads](https://owntracks.org/booklet/features/encrypt)
+
