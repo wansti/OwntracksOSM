@@ -6,10 +6,38 @@ Owntracks is open source and privacy focused. Using a commercial location sharin
 
 ## Usage
 ### Using OwntracksOSM as a Standalone App
-Without an Owntracks broker, you can still use the app as a free and open source OpenStreetMap client on your smartwatch. Using the location sharing features will require an Owntracks broker.
+Without an Owntracks server, you can still use the app as a free and open source OpenStreetMap client on your smartwatch. Using the location sharing features will require an Owntracks server.
 
-### Setting up an Owntracks Broker
-Please refer to [this manual](https://owntracks.org/booklet/guide/broker) on how to set up an Owntracks server and configure users and access rights. The document is written for the Raspberry Pi and the Raspbian OS but it also works on other Debian-based Linux distros such as Ubuntu.
+### Setting up an Owntracks Server
+Owntracks uses an MQTT broker such as [Mosquitto](https://mosquitto.org) as its server to relay location messages between devices. Please refer to [this manual](https://owntracks.org/booklet/guide/broker) on how to set up Mosquitto, configure it to be used with Owntracks, and set up users and access rights. The document is written for the Raspberry Pi and the Raspbian OS but it also works on other Debian-based Linux distros such as Ubuntu.
+
+OwntracksOSM uses websockets to connect to the server so make sure you enable websocket support in your Mosquitto configuration. It is possible to add multiple listeners to your configuration so if you have already configured your server for Owntracks using a different protocol, you can simply add another websockets listener. Here is an example configuration that has websockets and TLS enabled (with a [LetsEncrypt](https://letsencrypt.org) certificate) on port 8883, and an unencrypted MQTT listener on port 1883: 
+
+```
+allow_anonymous false
+password_file /etc/mosquitto/owntracks.pw
+acl_file /etc/mosquitto/owntracks.acl
+
+persistence_file owntracks.db
+
+log_type error
+log_type warning
+log_type notice
+log_type information
+log_timestamp true
+connection_messages true
+
+# Unencrypted MQTT listener on port 1883
+listener 1883
+
+# TLS-encrypted websockets listener on port 8883
+listener 8883
+protocol websockets
+certfile /etc/letsencrypt/live/<YOUR_SERVER_URL>/cert.pem
+cafile /etc/letsencrypt/live/<YOUR_SERVER_URL>/chain.pem
+keyfile /etc/letsencrypt/live/<YOUR_SERVER_URL>/privkey.pem
+```
+
 
 ### Main Screen
 Upon opening the app on your watch you will be greeted with the map screen and a menu button. Use the touch screen to move the map and the bezel or two-finger pinch gesture to zoom. Press the menu button to bring up the menu where you will find the following functions (left to right):
