@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns:tizen="http://tizen.org/ns/widgets" xmlns="http://www.w3.org/ns/widgets" id="https://discarded-ideas.org/OwntracksOSM" version="1.0.1" viewmodes="maximized">
+    <access origin="*" subdomains="true"></access>
+    <access origin="https://opentopomap.org" subdomains="true"></access>
+    <tizen:application id="kE6J4ZgyNX.OwntracksOSM" package="kE6J4ZgyNX" required_version="4.0"/>
+    <tizen:background-category value="location"/>
+    <tizen:background-category value="background-network"/>
+    <tizen:background-category value="iot-communication"/>
+    <tizen:background-category value="sensor"/>
+    <content src="index.html"/>
+    <feature name="http://tizen.org/feature/screen.size.all"/>
+    <feature name="http://tizen.org/feature/download"/>
+    <feature name="http://tizen.org/feature/humanactivitymonitor"/>
+    <feature name="http://tizen.org/feature/location.gps"/>
+    <feature name="http://tizen.org/feature/network.internet"/>
+    <feature name="http://tizen.org/feature/location.batch"/>
+    <icon src="icon.png"/>
+    <name>Owntracks OSM</name>
+    <tizen:privilege name="http://tizen.org/privilege/system"/>
+    <tizen:privilege name="http://tizen.org/privilege/power"/>
+    <tizen:privilege name="http://tizen.org/privilege/download"/>
+    <tizen:privilege name="http://tizen.org/privilege/internet"/>
+    <tizen:privilege name="http://tizen.org/privilege/location"/>
+    <tizen:privilege name="http://tizen.org/privilege/healthinfo"/>
+    <tizen:profile name="wearable"/>
+    <tizen:setting background-support="enable" encryption="disable" hwkey-event="enable"/>
+</widget>

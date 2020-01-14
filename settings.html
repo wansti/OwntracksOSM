@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="Owntracks OSM Settings"/>
+
+    <title>Settings</title>
+    
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <script src="js/settings.js"></script>       	
+</head>
+
+<body>
+	<div id="settingsLayer">	
+		<h5>Settings</h5>
+		Host Address<br><input type=text class=inputbox id=inputURL /><br><br>
+		Port<br><input type=number class=inputbox size=5 id=inputPort /><br><br>
+		Use TLS/SSL<br><input type=checkbox class=checkbox id=inputTLS /><br><br>
+		User Name<br><input type=text class=inputbox id=inputUserName /><br><br>
+		Password<br><input type=password class=inputbox id=inputPassword /><br><br>
+		Device ID<br><input type=text class=inputbox id=inputDeviceID /><br><br>
+		Tracker ID<br><input type=text class=inputbox size=2 id=inputInitials /><br><br>
+		Retain Messages<br><input type=checkbox class=checkbox id=inputRetain /><br><br>
+		Update Frequency<br><select class=inputbox id=inputUpdateFrequency>
+  			<option value=10>10 seconds</option>
+  			<option value=20>20 seconds</option>
+  			<option value=30>30 seconds</option>
+  			<option value=60>1 minute</option>
+  			<option value=300>5 minutes</option>
+  			<option value=600>10 minutes</option>
+  			<option value=900>15 minutes</option>
+  			<option value=1800>30 minutes</option>
+  			<option value=3600>1 hour</option>
+		</select><br><br>
+		<button type="button" class=button id=buttonApply>Apply</button><br><br>
+	</div>
+</body>
+</html>

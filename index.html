@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="Owntracks OSM UI"/>
+
+    <title>Owntracks OSM</title>
+    
+    <link rel="stylesheet" href="lib/leaflet/leaflet.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <script src="lib/paho/paho-mqtt.js"></script>
+    <script src="lib/leaflet/leaflet.js"></script>
+    <script src="js/main.js"></script>       	
+</head>
+
+<body>
+	<div id="map"></div>
+  		<div id=divButtonConnection><img src="image/disconnected.png" width=64 height=64 id=ButtonConnection></img></div>
+  		<div id=divButtonMarker><img src="image/autopan.png" width=64 height=64 id=ButtonMarker></img></div>
+  		<div id=divButtonSettings><img src="image/settings.png" width=64 height=64 id=ButtonSettings></img></div>
+  		<div id=divButtonMenu><img src="image/menu.png" width=64 height=64 id=ButtonMenu></img></div>
+  		<div id=divButtonScreen><img src="image/screenoff.png" width=64 height=64 id=ButtonScreen></img></div>
+  		<div id=divButtonDebug><img src="image/logoff.png" width=64 height=64 id=ButtonDebug></img></div>
+  		<div id=divButtonPin><img src="image/placepin.png" width=64 height=64 id=ButtonPin></img></div>
+  		<div id=divButtonPinRemove><img src="image/removepin.png" width=64 height=64 id=ButtonPinRemove></img></div>
+	<div id="logLayer">
+		<span class=content_text_status id=logBox>Log</span>
+	</div>
+</body>
+</html>

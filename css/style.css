@@ -1,0 +1,174 @@
+* {
+    font-family: Verdana, Lucida Sans, Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 0px auto;
+    background-color:#222;
+}
+
+.contents {
+	display: flex;
+	display: -webkit-flex;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	height:320px;
+}
+
+
+.content_text {
+	font-weight:bold;
+	font-size:2.5em;
+	color:#fff;
+}
+
+.content_text_status {
+	font-weight:bold;
+	font-size:1em;
+	color:#fff;
+}
+
+.button {
+	width: 96px;
+	height: 48px;
+	font-size:1.2em;
+}
+
+.inputbox {
+	width: 240px;
+	height: 1.2em;
+	font-size:1.2em;
+}
+
+.checkbox {
+	width: 48px;
+	height: 48px;
+}
+
+#divButtonConnection {
+	display: flex;
+	position: absolute;
+	width: 64px;
+	height: 64px;
+	top: 23px;
+	left: 190px;
+	z-index: 2;
+}
+
+#divButtonMarker {
+	display: flex;
+	position: absolute;
+	width: 64px;
+	height: 64px;
+	top: 70px;
+	left: 255px;
+	z-index: 2;
+}
+
+#divButtonMenu {
+	display: flex;
+	position: absolute;
+	width: 64px;
+	height: 64px;
+	top: 148px;
+	left: 280px;
+	z-index: 2;
+}
+
+#divButtonSettings {
+	display: flex;
+	position: absolute;
+	width: 64px;
+	height: 64px;
+	top: 225px;
+	left: 255px;
+	z-index: 2;
+}
+
+#divButtonScreen {
+	display: flex;
+	position: absolute;
+	width: 64px;
+	height: 64px;
+	top: 225px;
+	left: 41px;
+	z-index: 2;
+}
+
+#divButtonDebug {
+	display: flex;
+	position: absolute;
+	width: 64px;
+	height: 64px;
+	top: 148px;
+	left: 16px;
+	z-index: 2;
+}
+
+#divButtonPin {
+	display: flex;
+	position: absolute;
+	width: 64px;
+	height: 64px;
+	top: 70px;
+	left: 41px;
+	z-index: 2;
+}
+
+#divButtonPinRemove {
+	display: flex;
+	position: absolute;
+	width: 64px;
+	height: 64px;
+	top: 23px;
+	left: 106px;
+	z-index: 2;
+}
+
+#map {
+	height:360px;
+	width:360px;
+	margin:auto;
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:0;
+}
+
+#buttonLayer {
+	height:232px;
+	width:96px;
+	margin:auto;
+	position:absolute;
+	top:64px;
+	left:264px;
+	z-index:1;
+}
+
+#logLayer {
+	background-color:#707070;
+	overflow-y: auto;
+	height:232px;
+	width:200px;
+	margin:auto;
+	position:absolute;
+	top:64px;
+	left:80px;
+	z-index:1;
+}
+
+#settingsLayer {
+	max-width:100%;
+	overflow-x:hidden;
+	background-color:#000000;
+	color:#fff;
+	font-size:1.5em;
+	height:360px;
+	width:360px;
+	margin:auto;
+	position:absolute;
+	text-align:center;
+	top:0;
+	left:0;
+	z-index:2;
+}

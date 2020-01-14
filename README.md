@@ -1,17 +1,25 @@
-# OwntracksOSM
-OwntracksOSM is a standalone, wearable mapping and location sharing app for Samsung Galaxy brand smartwatches. On its own, it can be used to view [OpenStreetMap](https://www.openstreetmap.org) based maps on your watch and display your location using the watch's builtin GPS. In conjunction with an [MQTT](https://mqtt.org) broker and the [Owntracks](https://owntracks.org) protocol, it can be used to share your location with other users and display their locations on your watch in real time.
+# Owntracks OSM
+Owntracks OSM is a standalone, wearable mapping and location sharing app for Samsung Galaxy brand smartwatches. On its own, it can be used to view [OpenStreetMap](https://www.openstreetmap.org) based maps on your watch and display your location using the watch's builtin GPS. In conjunction with an [MQTT](https://mqtt.org) broker and the [Owntracks](https://owntracks.org) protocol, it can be used to share your location with other users and display their locations on your watch in real time.
 
 ## Why Owntracks for location sharing?
-Owntracks is open source and privacy focused. Using a commercial location sharing service is impossible without sharing highly sensitive data with third parties. Owntracks lets you [set up your own private location sharing server](https://owntracks.org/booklet/guide/broker) so all of your location data remains in your own hands. Since OwntracksOSM uses the builtin GPS of your smartwatch, it will work with location services on your phone turned off. OwntracksOSM is compatible with the [official apps for Android and iOS](https://owntracks.org/booklet/guide/apps) so it is possible to share your location with users who do not own a Samsung smartwatch. Please refer to the [Owntracks documentation](https://owntracks.org/booklet) and the [Owntracks repository on Github](https://github.com/owntracks) for more information on the service.
+Owntracks is open source and privacy focused. Using a commercial location sharing service is impossible without sharing highly sensitive data with third parties. Owntracks lets you [set up your own private location sharing server](https://owntracks.org/booklet/guide/broker) so all of your location data remains in your own hands. Since Owntracks OSM uses the builtin GPS of your smartwatch, it will work with location services on your phone turned off. Owntracks OSM is compatible with the [official apps for Android and iOS](https://owntracks.org/booklet/guide/apps) so it is possible to share your location with users who do not own a Samsung smartwatch. Please refer to the [Owntracks documentation](https://owntracks.org/booklet) and the [Owntracks repository on Github](https://github.com/owntracks) for more information on the service.
+
+## Download
+Owntracks OSM should appear in the Galaxy App Store for the following compatible devices:
+* Galaxy Gear S3
+* Galaxy Watch
+* Galaxy Watch Active
+* Galaxy Watch Active 2
+* Possibly others - please let me know
 
 ## Usage
-### Using OwntracksOSM as a Standalone App
+### Using Owntracks OSM as a Standalone App
 Without an Owntracks server, you can still use the app as a free and open source OpenStreetMap client on your smartwatch. Using the location sharing features will require an Owntracks server.
 
 ### Setting up an Owntracks Server
 Owntracks uses an MQTT broker such as [Mosquitto](https://mosquitto.org) as its server to relay location messages between devices. Please refer to [this manual](https://owntracks.org/booklet/guide/broker) on how to set up Mosquitto, configure it to be used with Owntracks, and set up users and access rights. The document is written for the Raspberry Pi and the Raspbian OS but it also works on other Debian-based Linux distros such as Ubuntu.
 
-OwntracksOSM uses websockets to connect to the server so make sure you enable websocket support in your Mosquitto configuration. It is possible to add multiple listeners to your configuration so if you have already configured your server for Owntracks using a different protocol, you can simply add another websockets listener. Here is an example configuration that has websockets and TLS enabled (with a [LetsEncrypt](https://letsencrypt.org) certificate) on port 8883, and an unencrypted MQTT listener on port 1883: 
+Owntracks OSM uses websockets to connect to the server so make sure you enable websocket support in your Mosquitto configuration. It is possible to add multiple listeners to your configuration so if you have already configured your server for Owntracks using a different protocol, you can simply add another websockets listener. Here is an example configuration that has websockets and TLS enabled (with a [LetsEncrypt](https://letsencrypt.org) certificate) on port 8883, and an unencrypted MQTT listener on port 1883: 
 
 ```
 allow_anonymous false
@@ -53,7 +61,7 @@ Upon opening the app on your watch you will be greeted with the map screen and a
 
 The buttons on the smartwatch will do the following:
 * **Back Button (top)**: Exit the app and stop tracking.
-* **Menu Button (bottom)**: Hide the app and show the watch face. OwntracksOSM will maintain an open connection and keep sending position updates to the server. You may get a warning about the app draining your battery.
+* **Menu Button (bottom)**: Hide the app and show the watch face. Owntracks OSM will maintain an open connection and keep sending position updates to the server. You may get a warning about the app draining your battery.
 
 ### Server Settings
 Press the Settings button in the main menu to bring up the configuration page. Here, you will find the following settings:
@@ -81,7 +89,7 @@ Given a working Owntracks broker, users of the [official Owntracks apps for Andr
 Keeping the GPS on and maintaining an open internet connection to the server will obviously affect your watch's battery life. In our experience it is possible to use the app for several hours on a full charge and still get through the day with normal usage. If you leave the app running in the background to send location updates without using the map a single charge should last a day. Lowering the update frequency in the settings menu may improve your results.
 
 ### Troubleshooting Connection Errors
-The MQTT protocol is designed for environments with unstable connections (i.e. IoT scenarios). OwntracksOSM will always try to reconnect to the server if a connection is interrupted. If this fails, or you experience unreliable connections in general, here are a few things you can try:
+The MQTT protocol is designed for environments with unstable connections (i.e. IoT scenarios). Owntracks OSM will always try to reconnect to the server if a connection is interrupted. If this fails, or you experience unreliable connections in general, here are a few things you can try:
 
 * Make sure the Galaxy Wear app on your phone is allowed to run in the background and not affected by battery saving options.
 * Manually disconnect and reconnect using the "connect/disconnect" menu button.
@@ -89,5 +97,5 @@ The MQTT protocol is designed for environments with unstable connections (i.e. I
 * Check the log for hints on why the app cannot connect.
 
 ### Unsupported Features
-Only "location" type messages are currently supported by OwntracksOSM. Other message types such as [beacons](https://owntracks.org/booklet/features/beacons), [waypoints](https://owntracks.org/booklet/features/waypoints)
+Only "location" type messages are currently supported by Owntracks OSM. Other message types such as [beacons](https://owntracks.org/booklet/features/beacons), [waypoints](https://owntracks.org/booklet/features/waypoints)
 and [encrypted payloads](https://owntracks.org/booklet/features/encrypt) are not yet supported.
