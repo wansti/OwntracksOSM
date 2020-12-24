@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<widget xmlns:tizen="http://tizen.org/ns/widgets" xmlns="http://www.w3.org/ns/widgets" id="https://discarded-ideas.org/OwntracksOSM" version="1.0.1" viewmodes="maximized">
+<widget xmlns:tizen="http://tizen.org/ns/widgets" xmlns="http://www.w3.org/ns/widgets" id="https://discarded-ideas.org/OwntracksOSM" version="1.0.2" viewmodes="maximized">
     <access origin="*" subdomains="true"></access>
     <access origin="https://opentopomap.org" subdomains="true"></access>
     <tizen:application id="kE6J4ZgyNX.OwntracksOSM" package="kE6J4ZgyNX" required_version="4.0"/>
