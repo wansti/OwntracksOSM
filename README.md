@@ -1,4 +1,8 @@
 # Owntracks OSM
+## Discontinued ##
+Due to Samsung's move to the WearOS platform for their smartwatches I am discontinuing development on this project. I am happy to assist anyone who would like to pick it up and maintain it.
+
+## Overview
 Owntracks OSM is a standalone, wearable mapping and location sharing app for Samsung Galaxy brand smartwatches. On its own, it can be used to view [OpenStreetMap](https://www.openstreetmap.org) based maps on your watch and display your location using the watch's builtin GPS. In conjunction with an [MQTT](https://mqtt.org) broker and the [Owntracks](https://owntracks.org) protocol, it can be used to share your location with other users and display their locations on your watch in real time.
 
 ## Why Owntracks for location sharing?
